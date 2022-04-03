@@ -16,12 +16,12 @@
     @include text($titleFont, $smallTitle, $smallTitle, $medium, 10px 0, 0, 12px 0, 0);
     text-transform: uppercase;
   }
-  .intro__title {
+  h2.intro__title {
     //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
     @include text($titleFont, $heroTitle, $heroTitleSize, $medium, 10px 0, 0, 12px 0, 0);
     text-transform: uppercase;
   }
-  .intro__paragraph {
+  p.intro__paragraph {
     max-width: 800px;
     //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
     @include text($textFont, $text, $paragraphSize, $regular, 10px 0, 0, 12px 0, 0);

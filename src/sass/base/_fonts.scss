@@ -3,9 +3,11 @@
 ///////////////////////
 $fontSize1: clamp(1.875em, 3vw, 4.25em); // h1
 $fontSize2: clamp(1.4em, 3vw, 3em); // h2
+$fontSize3: clamp(1.2em, 3vw, 1.5em); // h3
 $fontSize5: clamp(1em, 3vw, 1.375em); // h5
-$fontSize6: 0.8em; // h6
+$fontSize6: 0.875em; // h6
 $fontSize7: 1em; // p
+$fontSize8: 1.125em; // p card
 
 $h1Size: $fontSize1;
 $paragraphSize: $fontSize7;
@@ -13,6 +15,11 @@ $link-size: $fontSize7;
 $heroParagraphSize: $fontSize5;
 $smallTitle: $fontSize6;
 $heroTitleSize: $fontSize2;
+$redCardTitleSize: $fontSize3;
+$redCardParagraphSize: $fontSize8;
+$pressCardTitleSize: $fontSize6;
+$pressCardParagraphSize: $fontSize5;
+$pressCardDateSize: $fontSize6;
 
 ////////////////////////
 // Font Weight definition

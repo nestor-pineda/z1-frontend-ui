@@ -25,7 +25,7 @@
       @include text($textFont, $paragraphHero, $heroParagraphSize, $regular, 10px 0, 0, 20px 0, 0);
     }
     .hero-btn {
-      width: 172px;
+      padding: 0 38px;
       height: 48px;
       color: $buttonText;
       background-color: $buttonBg;
@@ -33,6 +33,14 @@
       border: none;
       outline: none;
       margin: 20px 0;
+      display: inline-flex;
+      align-items: center;
+      &:hover {
+        opacity: 0.7;
+      }
+      .hero-btn__link-icon {
+        margin-left: 5px;
+      }
     }
   }
 }
@@ -40,6 +48,7 @@
 @media (min-width: 600px) {
   .hero-img {
     height: 680px;
+    align-items: center;
     .hero-img__text-box {
       margin-left: 80px;
     }

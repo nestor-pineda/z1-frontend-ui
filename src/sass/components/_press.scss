@@ -1,0 +1,98 @@
+@import "../styles.scss";
+
+.press-header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 64px 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2.press-header__title {
+    //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+    @include text($titleFont, $heroTitle, $heroTitleSize, $medium, 10px 0, 0, 12px 0, 0);
+  }
+  .press-header__link {
+    //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+    @include text($linkFont, $pressLink, $paragraphSize, $medium, 10px 0, 0, 12px 0, 0);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    &:hover {
+      color: $pressLinkHover;
+    }
+    .press-header__link-icon {
+      margin-left: 5px;
+    }
+  }
+}
+
+.press-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  .press-card {
+    width: 100%;
+    max-width: 592px;
+    background-color: $pressCardBg;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+    .press-card__icon {
+    }
+    h6.press-card__title {
+      //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+      @include text($titleFont, $pressCardTitle, $pressCardTitleSize, $medium, 10px 0, 0, 12px 0, 0);
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p.press-card__paragraph {
+      //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+      @include text($textFont, $pressCardParagraph, $pressCardParagraphSize, $regular, 10px 0, 0, 12px 0, 0);
+      text-align: center;
+    }
+    p.press-card__date {
+      //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+      @include text($textFont, $pressDate, $pressCardDateSize, $regular, 10px 0, 0, 12px 0, 0);
+      text-align: center;
+      flex-grow: 1;
+    }
+    a.press-card__read-more {
+      //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+      @include text($linkFont, $pressLink, $paragraphSize, $medium, 10px 0, 0, 12px 0, 0);
+      text-decoration: none;
+      text-align: center;
+      &:hover {
+        color: $pressLinkHover;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .press-cards-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 32px;
+    .press-card {
+      padding: 45px 40px;
+      align-items: flex-start;
+      margin-top: 0;
+      .press-card__icon {
+        text-align: left;
+      }
+      h3.press-card__title {
+        text-align: left;
+      }
+      p.press-card__paragraph {
+        text-align: left;
+      }
+      p.press-card__date {
+        text-align: left;
+      }
+      a.press-card__read-more {
+        text-align: left;
+      }
+    }
+  }
+}

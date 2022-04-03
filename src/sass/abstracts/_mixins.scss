@@ -1,0 +1,13 @@
+// All Titles Mixine
+@mixin text($fontFam, $color, $size, $weight, $margin, $padding, $margin600, $padding600) {
+  font-family: $fontFam;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  margin: $margin;
+  padding: $padding;
+  @media (min-width: 600px) {
+    margin: $margin600;
+    padding: $padding600;
+  }
+}

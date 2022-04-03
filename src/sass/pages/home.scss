@@ -1,0 +1,12 @@
+@import "../styles.scss";
+
+.page {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  .page {
+    padding: 0 60px;
+  }
+}

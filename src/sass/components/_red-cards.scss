@@ -14,6 +14,9 @@
     flex-direction: column;
     margin-top: 25px;
     .red-card__icon {
+      width: 100%;
+      max-width: 78px;
+      margin-bottom: 17px;
     }
     h3.red-card__title {
       //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
@@ -30,7 +33,7 @@
 
 @media (min-width: 600px) {
   .red-cards-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 32px;
     .red-card {
       padding: 45px 40px;

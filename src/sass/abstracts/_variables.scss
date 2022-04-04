@@ -8,9 +8,10 @@ $color3: #bd1c43; // Red
 $color4: #7c2d44; // Burgundy
 $color5: #aeaeae; // Medium Grey
 $color6: #f2f2f2; // Grey
-$color7: #ffffff; // White 100%
+$color7: rgba(255, 255, 255, 0.7); // White 70%
 $color8: #faf4ef; // Light Orang
 $color9: #6d6d6d; // Dark Grey
+$color10: #a9b2b5; // Deep Blue
 
 $text: $color1;
 $titleHero: $color2;
@@ -31,3 +32,9 @@ $pressCardParagraph: $color1;
 $pressLink: $color3;
 $pressLinkHover: $color1;
 $pressDate: $color9;
+$footerBg: $color1;
+$footerTitle: $color5;
+$footerLink: $color2;
+$footerLinkHover: $color3;
+$footerCopy: $color10;
+$footerTerms: $color7;

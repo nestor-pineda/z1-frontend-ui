@@ -1,0 +1,84 @@
+@import "../styles.scss";
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $footerBg;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  .footer__top {
+    display: grid;
+    grid-template-columns: 1fr;
+    .footer__info {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      .footer__logo {
+        @include logo;
+        margin-bottom: 30px;
+      }
+      h6.footer__info-title {
+        //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+        @include text($titleFont, $footerTitle, $footerTitleSize, $regular, 0 0 20px 0, 0, 0 0 20px 0, 0);
+      }
+      a.footer__info-link {
+        //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+        @include text($linkFont, $footerLink, $footerLinkSize, $regular, 0 0 16px 0, 0, 0 0 16px 0, 0);
+        text-decoration: none;
+        &:hover {
+          color: $footerLinkHover;
+        }
+      }
+    }
+  }
+  .footer__bottom {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .footer__copy {
+      p.copy {
+        //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+        @include text($textFont, $footerCopy, $footerCopySize, $regular, 0 0 15px, 0, 0, 0);
+      }
+    }
+    .footer__tearms {
+      a.footer__terms-link {
+        //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+        @include text($linkFont, $footerTerms, $footerCopySize, $regular, 0, 0, 0, 0);
+        text-decoration: none;
+        &:not(:last-child):after {
+          content: "•";
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .footer {
+    padding: 60px 112px;
+    margin-top: 100px;
+    .footer__top {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      .footer__info {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+    .footer__bottom {
+      margin-top: 150px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

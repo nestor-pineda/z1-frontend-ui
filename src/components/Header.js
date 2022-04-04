@@ -2,7 +2,7 @@ import "../sass/components/_header.scss";
 
 const Header = () => {
   return (
-    <div className="header">
+    <header className="header">
       <div className="logo"></div>
       <nav className="navigation">
         <a className="navigation__link" href="/html/">
@@ -15,7 +15,7 @@ const Header = () => {
           Contact
         </a>
       </nav>
-    </div>
+    </header>
   );
 };
 

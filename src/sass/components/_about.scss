@@ -1,0 +1,74 @@
+@import "../styles.scss";
+
+.about {
+  width: 100%;
+  height: calc(100vh);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  background: #fff url("../../../public/images/about.jpg") center center/cover no-repeat;
+  .about__text-box {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    h6.about__subtitle {
+      //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+      @include text($titleFont, $pressCardTitle, $pressCardTitleSize, $medium, 10px 0, 0, 12px 0, 0);
+      text-align: center;
+      text-transform: uppercase;
+    }
+    h1.about__title {
+      //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+      @include text($titleFont, $text, $aboutTitleSize, $medium, 10px 0, 0, 10px 0, 0);
+    }
+    p.about__paragraph {
+      //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+      @include text($textFont, $text, $aboutParagraphSize, $regular, 10px 0, 0, 12px 0, 0);
+    }
+    a.about__link {
+      //text Mixin: font-family, color, size, weight, margin, padding, margin600, padding600
+      @include text($linkFont, $pressLink, $paragraphSize, $medium, 10px 0 20px 0, 0, 40px 0, 0);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      &:hover {
+        color: $pressLinkHover;
+      }
+      .about__link-icon {
+        margin-left: 5px;
+      }
+    }
+  }
+  .about__image {
+    width: 100%;
+    height: 100%;
+    background: #fff url("../../../public/images/doctores.jpg") center center/cover no-repeat;
+  }
+}
+
+@media (min-width: 600px) {
+  .about {
+    margin-top: 128px;
+    height: 680px;
+    align-items: center;
+    padding: 80px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    .about__text-box {
+      padding-right: 50px;
+      box-sizing: border-box;
+      width: 50%;
+    }
+    .about__image {
+      width: 50%;
+    }
+  }
+}

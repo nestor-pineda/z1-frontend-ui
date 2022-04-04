@@ -3,7 +3,7 @@
 .hero-img {
   width: 100%;
   height: calc(100vh - 196px);
-  background-color: blue;
+  background: #fff url("../../../public/images/hero-mov.jpg") center center/cover no-repeat;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -35,6 +35,8 @@
       margin: 20px 0;
       display: inline-flex;
       align-items: center;
+      opacity: 1;
+      transition: opacity 1s ease 0s;
       &:hover {
         opacity: 0.7;
       }
@@ -49,6 +51,7 @@
   .hero-img {
     height: 680px;
     align-items: center;
+    background: #fff url("../../../public/images/hero.jpg") center center/cover no-repeat;
     .hero-img__text-box {
       margin-left: 80px;
     }

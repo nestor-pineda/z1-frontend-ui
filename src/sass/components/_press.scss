@@ -3,7 +3,7 @@
 .press-header {
   width: 100%;
   box-sizing: border-box;
-  padding: 64px 52px;
+  padding: 20px 10px 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,6 +71,9 @@
 }
 
 @media (min-width: 600px) {
+  .press-header {
+    padding: 64px 52px;
+  }
   .press-cards-grid {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 32px;
